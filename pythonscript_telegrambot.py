@@ -4,7 +4,7 @@ import random
 import csv 
 import numpy
 
-Tokenreader = open("C:/Users/Hannah/Documents/Privat/TelegramBot/Token.txt","r")
+Tokenreader = open("Token.txt","r")
 Token = Tokenreader.readline()
 
 bot = telegram.Bot(token=str(Token))
@@ -20,7 +20,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 print(bot.get_me())  #Gibt Informationen über den Bot aus
 
 #Daten importieren
-reader = csv.reader(open("C:/Users/Hannah/Documents/Privat/TelegramBot/Datenbank.csv", "r"), delimiter=";")
+reader = csv.reader(open("Datenbank.csv", "r"), delimiter=";")
 x = list(reader)
 data = numpy.array(x).astype("str")
 #print(data[13][0])
